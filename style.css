@@ -1,0 +1,333 @@
+:root {
+    --warna-utama: #6d28d9;
+    --warna-hover: #8b5cf6;
+    --warna-teks: white;
+    --warna-gelap: rgba(0, 0, 0, 0.65);
+    --warna-card: rgba(255, 255, 255, 0.12);
+    --warna-border: rgba(255, 255, 255, 0.3);
+    --jarak-kecil: 10px;
+    --jarak-sedang: 20px;
+    --jarak-besar: 60px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--warna-teks);
+    line-height: 1.6;
+    background: black;
+}
+
+header {
+    position: relative;
+    min-height: 100vh;
+    padding: 25px 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+header p {
+    margin: var(--jarak-kecil) 0;
+    font-size: 18px;
+}
+/*
+header::after {
+    content: "Dummy";
+
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    padding: var(--jarak-kecil) var(--jarak-sedang);
+
+    color: var(--warna-teks);
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 10px;
+}*/
+
+nav {
+    margin-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    gap: var(--jarak-sedang);
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+nav a {
+    display: block;
+
+    padding: var(--jarak-kecil) var(--jarak-sedang);
+
+    color: var(--warna-teks);
+    text-decoration: none;
+
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--warna-hover);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    margin: var(--jarak-besar) 0;
+    padding: 35px;
+
+    background: var(--warna-gelap);
+
+    border-radius: 20px;
+}
+
+section h2 {
+    font-size: 35px;
+}
+
+section h3 {
+    font-size: 24px;
+}
+
+section p {
+    font-size: 17px;
+}
+
+#about figure {
+    margin: var(--jarak-sedang) 0;
+    text-align: center;
+}
+
+#about figure img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+}
+
+#about figcaption {
+    margin-top: var(--jarak-kecil);
+    font-style: italic;
+}
+
+#about article {
+    padding: 25px;
+
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 15px;
+}
+
+#project {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--jarak-sedang);
+}
+
+#project h2 {
+    grid-column: 1 / -1;
+}
+
+#project article {
+    padding: 25px;
+    margin: 0;
+
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 15px;
+}
+
+#project a {
+    display: inline-block;
+
+    padding: var(--jarak-kecil) 18px;
+
+    color: var(--warna-teks);
+    text-decoration: none;
+
+    background: var(--warna-utama);
+
+    border-radius: 8px;
+}
+
+#project a:hover {
+    background: var(--warna-hover);
+}
+
+#hobby > ul {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--jarak-kecil);
+
+    padding-left: var(--jarak-sedang);
+}
+
+#hobby article,
+#hobby aside {
+    padding: 25px;
+    margin: var(--jarak-sedang) 0;
+
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 15px;
+}
+
+#skill ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--jarak-sedang);
+
+    padding: 0;
+
+    list-style: none;
+}
+
+#skill li {
+    padding: var(--jarak-kecil) var(--jarak-sedang);
+
+    background: var(--warna-card);
+
+    border: 1px solid var(--warna-border);
+
+    border-radius: 10px;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    padding: 30px;
+
+    border: 1px solid var(--warna-border);
+
+    border-radius: 15px;
+}
+
+legend {
+    padding: 0 var(--jarak-kecil);
+
+    font-size: 22px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    color: var(--warna-teks);
+
+    background: rgba(0, 0, 0, 0.5);
+
+    border: 1px solid var(--warna-border);
+
+    border-radius: 8px;
+}
+
+input[type="color"] {
+    height: 50px;
+    padding: 3px;
+}
+
+input[type="range"] {
+    padding: 0;
+}
+
+button {
+    padding: 12px 22px;
+
+    margin-right: var(--jarak-kecil);
+
+    color: var(--warna-teks);
+
+    background: var(--warna-utama);
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--warna-hover);
+}
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #project {
+        grid-template-columns: 1fr;
+    }
+
+    #hobby > ul {
+        grid-template-columns: 1fr;
+    }
+}
